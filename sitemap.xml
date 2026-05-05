@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.swamedia.online/</loc>
+    <lastmod>2026-05-01</lastmod>
+    <image:image>
+      <image:loc>https://www.swamedia.online/icons/icon-512.svg</image:loc>
+    </image:image>
+  </url>
+  <url><loc>https://www.swamedia.online/search</loc><lastmod>2026-05-01</lastmod></url>
+  <url><loc>https://www.swamedia.online/series</loc><lastmod>2026-05-01</lastmod></url>
+  <url><loc>https://www.swamedia.online/storyzone</loc><lastmod>2026-05-01</lastmod></url>
+  <url><loc>https://www.swamedia.online/payment</loc><lastmod>2026-05-01</lastmod></url>
+  <url><loc>https://www.swamedia.online/app</loc><lastmod>2026-05-01</lastmod></url>
+  <url><loc>https://www.swamedia.online/install/android</loc><lastmod>2026-05-01</lastmod></url>
+  <url><loc>https://www.swamedia.online/install/ios</loc><lastmod>2026-05-01</lastmod></url>
+  <url><loc>https://www.swamedia.online/feedback</loc><lastmod>2026-05-01</lastmod></url>
+  <url><loc>https://www.swamedia.online/help</loc><lastmod>2026-05-01</lastmod></url>
+  <url><loc>https://www.swamedia.online/about-us</loc><lastmod>2026-05-01</lastmod></url>
+  <url><loc>https://www.swamedia.online/privacy-policy</loc><lastmod>2026-05-01</lastmod></url>
+  <url><loc>https://www.swamedia.online/disclaimer</loc><lastmod>2026-05-01</lastmod></url>
+</urlset>

@@ -1,0 +1,16 @@
+project_id = "uotkpiamoxpgrmtkpoyi"
+
+[functions.donate]
+verify_jwt = false
+
+[functions.mongike-webhook]
+verify_jwt = false
+
+[functions.donation-status]
+verify_jwt = false
+
+[functions.activate-subscription]
+verify_jwt = false
+
+[functions.subscription-status]
+verify_jwt = false

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwaMedia Dashboard</title>
+  <link rel="stylesheet" href="/subscriptions/subscription.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">Subscription Dashboard</div>
+      <h1>Track plan status and remaining access time.</h1>
+      <p>This dashboard reads the verified subscription state, calculates days remaining from the expiry date, and syncs the result back into Firebase so expired users fall back to unpaid access automatically.</p>
+    </section>
+
+    <section class="summary">
+      <article class="card status-card">
+        <h2 class="panel-title">Account</h2>
+        <div id="account-info"></div>
+      </article>
+
+      <article class="card status-card">
+        <h2 class="panel-title">Subscription</h2>
+        <div id="subscription-info"></div>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top: 22px;">
+      <h2 class="panel-title">Access Control</h2>
+      <div id="access-notice" class="notice"></div>
+      <div class="actions" style="margin-top: 16px;">
+        <a class="button-link primary" href="/plans">Upgrade or Renew</a>
+        <a class="button-link secondary" href="/">Back to App</a>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/subscriptions/dashboard.js"></script>
+</body>
+</html>

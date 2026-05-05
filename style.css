@@ -1,0 +1,231 @@
+/* SwaMedia - Watch Page Styles */
+
+/* Base Styles */
+body {
+    background-color: #000000;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
+
+/* Loading Spinner */
+#video-loader {
+    transition: opacity 0.3s ease-in-out;
+}
+
+#video-loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Video Player */
+#video-player {
+    background-color: #000000;
+}
+
+#video-player::-webkit-media-controls {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Star Rating */
+.star-btn {
+    cursor: pointer;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.star-btn:hover {
+    transform: scale(1.1);
+}
+
+.star-btn.active {
+    color: #fbbf24 !important;
+}
+
+.star-btn:hover:not(.active) {
+    color: #fbbf24;
+}
+
+/* Vote Buttons */
+.vote-btn {
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.vote-btn:hover {
+    transform: scale(1.05);
+}
+
+#like-btn.voted {
+    color: #22c55e !important;
+}
+
+#dislike-btn.voted {
+    color: #ef4444 !important;
+}
+
+#like-btn:disabled,
+#dislike-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Play Next Button */
+#play-next-btn {
+    transition: all 0.2s ease-in-out;
+}
+
+#play-next-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+}
+
+#play-next-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Genre Tags */
+.genre-tag {
+    background-color: #374151;
+    color: #d1d5db;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.genre-tag:hover {
+    background-color: #ef4444;
+    color: white;
+}
+
+/* Comment Styles */
+.comment-item {
+    background-color: #1f2937;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.comment-user {
+    font-weight: 600;
+    color: #ef4444;
+}
+
+.comment-time {
+    font-size: 0.75rem;
+    color: #9ca3af;
+}
+
+.comment-content {
+    color: #d1d5db;
+    line-height: 1.6;
+}
+
+/* Toast Notification */
+#toast {
+    z-index: 9999;
+}
+
+#toast.show {
+    transform: translateX(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #video-title {
+        font-size: 1.5rem;
+    }
+
+    .star-btn {
+        font-size: 1.5rem;
+    }
+
+    #play-next-btn {
+        width: 100%;
+    }
+}
+
+/* Animation for Page Load */
+.page-content {
+    animation: pageFadeIn 0.3s ease-in-out;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-content {
+    background-color: #1f2937;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    max-width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal-overlay.show .modal-content {
+    transform: scale(1);
+}

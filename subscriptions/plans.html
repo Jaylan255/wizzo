@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwaMedia Plans</title>
+  <link rel="stylesheet" href="/subscriptions/subscription.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">Premium Plans</div>
+      <h1>Choose a plan, confirm payment, and unlock premium access.</h1>
+      <p>Your existing auto payment system stays unchanged. This page only sends the selected plan amount to the current payment endpoint, waits for verification, then activates the subscription and syncs access back to your app account.</p>
+    </section>
+
+    <section id="plan-grid" class="grid"></section>
+
+    <section class="summary">
+      <article id="payment-panel" class="card">
+        <h2 class="panel-title">Payment Form</h2>
+        <form id="pay-form">
+          <div class="form-group">
+            <label>Selected Plan</label>
+            <div class="notice">
+              <strong id="selected-plan-name">Week</strong><br>
+              <span class="muted" id="selected-plan-days">7 days</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="country-code">Country Code</label>
+            <select id="country-code" disabled>
+              <option value="+255">+255 Tanzania</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input id="phone" type="tel" inputmode="numeric" placeholder="07XXXXXXXX" required>
+          </div>
+          <div class="form-group">
+            <label for="amount">Amount</label>
+            <input id="amount" type="number" readonly>
+          </div>
+          <div id="payment-message" class="message"></div>
+          <div class="actions">
+            <button id="submit-payment" class="primary" type="submit">Pay</button>
+            <a class="button-link secondary" href="/dashboard">Open Dashboard</a>
+          </div>
+        </form>
+      </article>
+
+      <aside class="card status-card">
+        <h2 class="panel-title">Current Subscription</h2>
+        <div id="subscription-summary"></div>
+        <div class="notice">After payment success, this module updates the subscription record and syncs `premiumExpiry` back to Firebase so the existing app premium gate can continue working without changing `index.html`.</div>
+      </aside>
+    </section>
+  </main>
+
+  <script type="module" src="/subscriptions/plans.js"></script>
+</body>
+</html>

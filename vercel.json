@@ -1,0 +1,23 @@
+{
+  "routes": [
+    {
+      "src": "/api/mongike/initiate-mobile-money/?",
+      "dest": "/api/mongike/initiate-mobile-money.js"
+    },
+    {
+      "src": "/api/mongike/webhook/?",
+      "dest": "/api/mongike/webhook.js"
+    },
+    {
+      "src": "/admin/?",
+      "dest": "/admin/admin.html"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
+    }
+  ]
+}
